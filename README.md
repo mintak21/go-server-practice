@@ -10,6 +10,9 @@ Frameworks used in this project below:
 - [gorm](https://github.com/jinzhu/gorm)
 - postgres
 
+# Entity Relation
+`users` (1)<------>(many) `comments`
+
 # Directory Structure
 
 ### `cmd`
@@ -19,6 +22,11 @@ Includes small main function that invokes the codes form `/pkg`.
 ### `pkg`
 Main Architecture codes are inculeded.
 `pkg` directories are based on Clean Architecture.
+
+- `domain` : `Entities` Layer
+- `usecase` : `Use cases` Layer
+- `interface` : `Interface Adapters` Layer
+- `infra` : `Frameworks And Drivers` Layer
 
 ### `build`
 - `build/package` : Container Configurations = Dockerfile
